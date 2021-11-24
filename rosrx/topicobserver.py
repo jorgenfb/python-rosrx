@@ -1,5 +1,5 @@
 import rospy
-from rx import Observer
+from rx.core.typing import Observer
 
 
 class TopicObserver(Observer):

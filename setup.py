@@ -9,5 +9,5 @@ setup(name='rosrx',
       keywords='rx rxpy reactive ROS rospy',
       license='MIT',
       packages=['rosrx'],
-      install_requires=['rx~=1.6'],
+      install_requires=['rx~=3.2'],
       zip_safe=True)
