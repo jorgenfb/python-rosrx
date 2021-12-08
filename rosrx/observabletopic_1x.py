@@ -1,11 +1,11 @@
 import rospy
-from rx import create
+from rx import Observable
 
 
 def observabletopic(topic, topic_type, queue_size=None):
     """Subscribe to a ROS topic as a Observable stream of message"""
 
-    def subscribe(observer, disposable):
+    def subscribe(observer):
 
         def cb(message):
             observer.on_next(message)
@@ -18,4 +18,4 @@ def observabletopic(topic, topic_type, queue_size=None):
 
         return dispose
 
-    return create(subscribe)
+    return Observable.create(subscribe)
